@@ -1,0 +1,49 @@
+Implementar controle de acesso as funções dos usuários, onde os administradores possam gerenciar o acesso individual dos usuarios editando a permissão habilitando ou desabilitando o acesso as funções da opcões da barra lateral para cada usuario.
+
+Perfil do usuario no canto superior direito da tela reportando 404 Page Not Found, corrigir implementando funções especificadas
+
+Configurações do usuario no canto superior direito da tela reportando 404 Page Not Found, corrigir implementando funções especificadas
+
+Ocultar usuário leoalmeidas da tela de gereciamento de usuários para todos os outros usuários.
+
+Pagina de nova Despesa reportando erro [plugin:runtime-error-plugin] FormDescription is not defined
+
+Botão Gerar Relatorio em Financeiro/relatórios não funciona
+
+Botão Exportar em Produção/Produtos e fórmulas não funciona
+
+Adicionar barra de rolagem na janela de novo produto em Produção/Novo Produto e fixar o botão cancelar e Criar materia Prima na parte inferior da janela.
+
+adicionar botão adicionar na lateral da materia prima a adicionar a Fórmula do Produto
+
+adicionar Botão editar Produto castrado em Produção/Produto e Fórmulas 
+
+retirar Custo Unitário da janela de novo produto em Produção/Novo Produto
+
+Retirar preço de Venda da janela de novo produto em Produção/Novo Produto
+
+Botão de exportar em Estoque/Materias primas não funciona
+Pagina de Não conformidade reportando 404 Page Not Found, corrigir implementando funções especificadas
+
+Botão Nova Perda em Produção/Controle de Perdas não esta funcionando
+
+Botão Nova manutenção em Manutenção/Programação não esta funcionando
+
+Botão Nova manutenção, Botão Editar e Botão Concluir Manutenção em Manutenção/Programação não estão funcionando.
+
+Botão Nova Inspeção em Qualidade/Inspeção nao esta funcionando
+
+Pagina Não conformidade em Qualidade reportando erro 404 Page Not Found
+
+Pagina Pedidos em Comercial apresentando erro [plugin:runtime-error-plugin] Badge is not defined
+
+Botão Novo Fornecedor em Compras/Fornecedores não esta funcionando
+
+Pagina Cotações em Compras reportando erro 404 Page Not Found
+
+Todos os botões exportar não estão funcionando
+
+Ao exportar dar opção de exportar em arquivo PDF ou Excel>
+
+implementar sistema de chat interno com gerenciando pelo administrador, podendo ser ativado ou desativado pelos administradores
+

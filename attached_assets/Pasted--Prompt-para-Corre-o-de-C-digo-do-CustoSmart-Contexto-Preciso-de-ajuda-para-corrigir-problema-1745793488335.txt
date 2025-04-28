@@ -1,0 +1,74 @@
+# Prompt para Correção de Código do CustoSmart
+
+## Contexto
+
+Preciso de ajuda para corrigir problemas identificados no código do sistema CustoSmart, um sistema de gestão empresarial focado no controle de compras e custos. Uma análise técnica identificou vários problemas de desempenho, erros lógicos e código não otimizado que precisam ser corrigidos.
+
+## Problemas Identificados
+
+### Problemas de Desempenho
+1. Componentes React excessivamente grandes (alguns com mais de 1900 linhas)
+2. Uso ineficiente de hooks useEffect causando re-renderizações desnecessárias
+3. Manipulação direta do DOM em componentes React
+4. Consultas SQL não otimizadas
+
+### Erros Lógicos
+1. Gerenciamento de estado complexo com muitos estados independentes
+2. Tratamento de erros inconsistente
+3. Potenciais dependências circulares na importação de módulos
+
+### Código Duplicado ou Não Otimizado
+1. Componentes monolíticos que deveriam ser divididos
+2. Lógica de negócios duplicada entre componentes relacionados
+3. Funções aninhadas complexas difíceis de testar e manter
+
+## Arquivos Críticos
+
+Os arquivos mais problemáticos incluem:
+1. `client/src/pages/purchase/enhanced-quotations.tsx` (1930 linhas)
+2. `client/src/pages/purchase/quotations.tsx` (1250 linhas)
+3. `client/src/components/chat/SlackStyleChat.tsx`
+4. `server/database-storage.ts`
+
+## Solicitação
+
+Por favor, ajude-me a corrigir esses problemas seguindo estas diretrizes:
+
+1. **Para componentes grandes:**
+   - Divida-os em subcomponentes menores e mais especializados
+   - Extraia lógica comum para hooks personalizados
+   - Implemente padrões como Container/Presentational para separar lógica de apresentação
+
+2. **Para problemas de desempenho:**
+   - Otimize os hooks useEffect, consolidando efeitos relacionados
+   - Substitua manipulação direta do DOM por abordagens baseadas em CSS
+   - Implemente memoização com React.memo, useMemo e useCallback
+   - Otimize consultas SQL com índices apropriados e paginação
+
+3. **Para gerenciamento de estado:**
+   - Consolide estados relacionados em objetos
+   - Considere usar Context API ou bibliotecas como Redux para estados complexos
+   - Implemente um padrão consistente de gerenciamento de estado
+
+4. **Para código duplicado:**
+   - Extraia lógica comum para funções utilitárias ou hooks
+   - Crie componentes reutilizáveis para UI repetitiva
+   - Padronize o tratamento de erros
+
+## Formato da Resposta
+
+Para cada arquivo que você corrigir, por favor:
+1. Explique as mudanças que você fez
+2. Forneça o código corrigido
+3. Destaque as melhorias de desempenho ou manutenção esperadas
+
+Comece com os arquivos mais críticos mencionados acima, priorizando as correções que terão maior impacto no desempenho e manutenção do sistema.
+
+## Tecnologias Utilizadas
+
+O sistema utiliza:
+- Frontend: React, TypeScript, Tailwind CSS, Radix UI
+- Backend: Node.js, Express, PostgreSQL, Drizzle ORM
+- Outras: Socket.IO, PDF Generation (pdfmake, pdfkit)
+
+Obrigado pela ajuda na melhoria da qualidade do código do CustoSmart!

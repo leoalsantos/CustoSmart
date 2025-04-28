@@ -1,0 +1,33 @@
+Botão "Exportar" duplicado dentro da pagina "Administrativo"/"Alertas".
+Botão "Exportar" dentro da pagina "Administrativo"/"Alertas" não permite escolher exportar em em PDF.
+Botão "Exportar" dentro da pagina "Financeiro"/"Despesas" não esta funcionando.
+Botão Exportar dentro da pagina "Financeiro"/"Contas a Pagar/Receber" não esta funcionando.
+Botão "Gerar Relatorio" dentro da pagina "Finaneiro"/"Relatórios" não está funcionando.
+Adicionar botão para inserir Material ao lado esquerdo do botão excluir material em cada caixa de Matéria-prima aberta em Formula do Produto no modal(Dialog) "Novo Produto" dentro da pagina "Produção"/"Produtos e Formulas".
+Adicionar um espaço entre a caixa de inserir material ao produto e os botões cancelar e criar produto para que e solicitar confirmação para cancelar ou criar produto ao clicar nos botões.
+Botão "Exportar" dentro da pagina "Produção"/"Ordens de Produção" não esta funcionando.
+Botão "+ Nova Perda" dentro da pagina "Produção"/"Controle de Perdas" não está funcionando.
+Botão "Exportar" dentro da pagina "Produção"/"Controle de Perdas" não está funcionando.
+Botão "Exportar" dentro da pagina "Manutenção"/"Equipamentos" não está funcionando.
+Botão "Exportar" dentro da pagina "Manutenção"/"Ordens de Manutenção" não está funcionando.
+Todos od Botões dentro da pagina "Manutenção"/"Programação" não estão funcionando.
+Botão "Exportar" dentro da pagina "Estoque"/"Matérias-primas" não permite escolher exportar em em PDF.
+Botão "Exportar" dentro da pagina "Estoque"/"Produtos Acabados" não esta funcionando.
+Botão "+ Nova Inspeção" dentro da pagina "Qualidade"/"Inspeções" não esta funcionando.
+Todos os Botões "Detalhes" dentro da pagina "Qualidade"/"Inspeções" não estão funcionando.
+Pagina "Não Conformidades"dentro da pagina "Qualidade"/"Não Conformidades" exibindo erro 404 Page Not Found
+Botão "Exportar" dentro da pagina "Comercial"/"Clientes" não está funcionando.
+Botão "Exportar" dentro da pagina "Comercial"/"Pedidos" permite selecionar exportar em PDF ou Excel, mas só está exportando em excel
+Pagina "Configuração Fiscal" dentro da Pagina "Comercial"/"Configuração Fiscal" está em branco.
+Botão "+ Novo Fornecedor" dentro da pagina "Compras"/"Fornecedores" não esta funcionando.
+Todos os Botões dentro da janela "Lista de Fornecedores" na pagina "Compras"/"Fornecedores" não esta funcionando. sem aparece o nome da função e exibindo erro 404 Page Not Found.
+Pagina "Cotações" dentro da pagina "Compras"/"Cotações exibindo erro 404 Page Not Found.
+Função "Chat" exibida na Barra Lateral esquerda (Sidebar) "Principal" para usuários sem permissão, oculta-lo igual as demais funções ocultadas
+Função "Dashboard" exibida na Barra Lateral esquerda (Sidebar) "Principal" para usuários sem permissão, oculta-lo igual as demais funções ocultadas
+Função "Suporte Técnico" não está abrindo para os usuários sem permissão, tornar ela acessível para todos usuarios cadastrados indepedente de suas permissões.
+Funções não estão sendo exibida na Barra Lateral esquerda (Sidebar) "Principal" após administradores concederem as devidas permissões para os usuários, corrigir o erro, exibindo a função habilitada pelo usuário
+
+Adicionar o modulo de Recursos Humanos com todas as funções nessárias.
+
+ 
+

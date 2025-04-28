@@ -1,0 +1,123 @@
+ 1. Funcionalidades de Comunicação
+📩 Mensagens
+Envio de mensagens de texto em tempo real (instantâneo)
+
+Mensagens individuais (1:1)
+
+Mensagens em grupo
+
+Responder mensagens específicas (reply)
+
+Reações a mensagens (emojis)
+
+Encaminhar mensagens
+
+Marcar mensagens como favoritas / com estrela
+
+Modo de citação de mensagens
+
+📎 Anexos
+Enviar arquivos (PDF, DOCX, XLSX, etc.)
+
+Enviar imagens, vídeos e áudios
+
+Pré-visualização de arquivos
+
+Tamanho máximo por arquivo configurável
+
+Envio arrastando arquivos (drag & drop)
+
+Gravação e envio de áudio (push-to-talk)
+
+👥 2. Gestão de Usuários e Contatos
+Cadastro e login (com verificação por email ou telefone)
+
+Lista de contatos (com busca e filtros)
+
+Adicionar, bloquear e remover contatos
+
+Exibir status de presença (online, ausente, ocupado, offline)
+
+Exibir última vez online (configurável)
+
+Notificações de leitura (mensagem lida)
+
+Notificações de entrega (mensagem entregue)
+
+👤 3. Perfil do Usuário
+Foto de perfil
+
+Nome completo e nome de exibição
+
+Cargo / Departamento
+
+Status personalizado (com emoji e texto)
+
+Edição de perfil
+
+Configurações de privacidade (quem pode ver status, foto, etc.)
+
+👨‍👩‍👧‍👦 4. Grupos e Canais
+Criação de grupos (privados ou públicos)
+
+Canais de broadcast (apenas admins postam)
+
+Nome, descrição e imagem do grupo
+
+Adição e remoção de membros grupos
+
+Permissões específicas por usuário (admin, membro, moderador)
+
+Menções a membros (@usuario)
+
+Modo silencioso de grupo
+
+🔐 5. Segurança e Privacidade
+Criptografia de ponta a ponta (E2EE)
+
+Logs de atividade
+
+Armazenamento seguro (servidores com compliance: ISO, GDPR, LGPD, etc.)
+
+Proteção contra spam e links maliciosos
+
+🚨 6. Monitoramento e Controle de Conteúdo
+Logs de mensagens deletadas (visíveis para admins)
+
+Políticas de retenção de mensagens (auto delete, arquivamento)
+
+Relatórios de mensagens inadequadas (por usuários)
+
+Detecção de spam e flood
+
+Histórico de edições e exclusões de mensagens
+
+⚙️ 7. Configurações e Personalizações
+Modo escuro e claro
+
+Sons de notificação personalizados
+
+Modo “não perturbe”
+
+Organização por canais, tópicos, ou departamentos
+
+
+📊 8. Administração e Painel de Controle
+Dashboard de uso e estatísticas (usuários ativos, mensagens por dia, etc.)
+
+Gerenciamento de usuários e permissões
+
+Criação de equipes/departamentos
+
+Logs de acesso e auditoria
+
+Relatórios de uso
+
+Controle de dispositivos conectados
+
+
+
+
+
+🧪 10. Funcionalidades Extras (Avançadas)
+Mensagens programadas

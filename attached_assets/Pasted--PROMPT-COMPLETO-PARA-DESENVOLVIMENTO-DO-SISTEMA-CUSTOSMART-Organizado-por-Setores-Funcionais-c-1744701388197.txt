@@ -1,0 +1,221 @@
+🧠 PROMPT COMPLETO PARA DESENVOLVIMENTO DO SISTEMA "CUSTOSMART"
+
+Organizado por Setores Funcionais com Inclusão da Manutenção Industrial
+🎯 Objetivo do Sistema
+
+Desenvolver o CustoSmart, um sistema de gestão industrial completo, voltado para o controle de custos, produção, estoque, qualidade, manutenção, setor comercial e financeiro. O sistema deve oferecer uma visão integrada de toda a operação da empresa, otimizando recursos, aumentando a eficiência produtiva e fornecendo suporte estratégico à gestão.
+⚙️ ARQUITETURA TÉCNICA
+
+    Instalação local com acesso via navegador (Intranet/Web)
+
+    Responsivo: funcionamento ideal em desktop, tablet e celular
+
+    Stack recomendada:
+
+        Backend: Node.js / Python (FastAPI)
+
+        Frontend: React.js + TailwindCSS
+
+        Banco de dados: PostgreSQL
+
+    Segurança
+
+        Controle de permissões e níveis de acesso
+
+        Logs de auditoria
+
+        Backup automático e manual
+
+        Sincronização com Google Drive ou Dropbox
+
+📁 FUNCIONALIDADES POR SETOR
+🏢 1. SETOR ADMINISTRATIVO / GESTÃO GERAL
+
+    Cadastro de empresa (dados, logo, dados fiscais)
+
+    Gestão de usuários, permissões e níveis de acesso
+
+    Logs de ações por usuário
+
+    Parâmetros do sistema: margens, unidades, conversões
+
+💸 2. SETOR FINANCEIRO
+2.1 Despesas e Lançamentos
+
+    Cadastro de despesas fixas e variáveis
+
+    Controle de vencimentos e recorrências
+
+    Associação com centros de custo
+
+2.2 Contas a Pagar e Receber
+
+    Controle de boletos, vencimentos, formas de pagamento
+
+    Integração com Asaas (API)
+
+    Geração de extratos e relatórios
+
+2.3 Relatórios Financeiros
+
+    Fluxo de caixa por período
+
+    Gráficos e comparativos por categoria
+
+    Exportação para Excel e PDF
+
+🏭 3. SETOR DE PRODUÇÃO / ENGENHARIA
+3.1 Produtos e Fórmulas
+
+    Cadastro de produtos com composição por matéria-prima
+
+    Custo unitário calculado automaticamente
+
+    Margem de lucro simulável
+
+3.2 Ordens de Produção
+
+    Geração e controle por status
+
+    Alocação de recursos e previsão de tempo
+
+    Consumo de matérias-primas com baixa automática
+
+3.3 Controle de Perdas
+
+    Registro de perdas por motivo (falha, quebra, validade)
+
+    Relatório de rendimento e não conformidade
+
+🧰 4. SETOR DE MANUTENÇÃO
+4.1 Equipamentos e Máquinas
+
+    Cadastro de equipamentos (modelo, nº de série, fabricante, datas)
+
+    Classificação por setor, tipo e criticidade
+
+    Histórico de manutenções por máquina
+
+4.2 Ordens de Manutenção
+
+    Registro de manutenção corretiva e preventiva
+
+    Classificação por urgência: Alta, Média, Baixa
+
+    Descrição do problema, setor, solicitante e equipamento envolvido
+
+    Status da ordem: Aberta, Em andamento, Concluída
+
+4.3 Programação de Manutenção
+
+    Calendário mensal/semanal de manutenções preventivas
+
+    Gatilhos: tempo (dias), produção acumulada, horas de uso
+
+    Alertas e notificações de programação vencida ou próxima
+
+4.4 Relatórios de Manutenção
+
+    Custo por equipamento, por tipo e por período
+
+    Gráfico de paradas e produtividade perdida
+
+    Tempo médio de resposta e solução
+
+📦 5. SETOR DE ESTOQUE / LOGÍSTICA
+
+    Cadastro e controle de entradas e saídas de matérias-primas
+
+    Inventário por lote, validade e localização
+
+    Alerta de estoque mínimo
+
+    Importação de notas fiscais XML e registro automático
+
+    Conversão de unidades (L → ml, kg → g)
+
+🔎 6. SETOR DE QUALIDADE
+
+    Inspeção de qualidade de entrada e saída
+
+    Registro de não conformidades
+
+    Ações corretivas/preventivas
+
+    Relatórios por lote, produto e fornecedor
+
+🛒 7. SETOR DE COMPRAS E FORNECEDORES
+
+    Cadastro completo de fornecedores
+
+    Solicitação e comparação de cotações por produto
+
+    Registro de histórico de preços
+
+    Sugestão automática de melhor custo-benefício
+
+    Relatórios de desempenho dos fornecedores
+
+💼 8. SETOR COMERCIAL
+
+    Cadastro de clientes
+
+    Registro de pedidos de venda
+
+    Geração de documentos de venda
+
+    Controle de saída de produtos acabados
+
+    Integração com financeiro para cobrança
+
+📊 9. SETOR DE INTELIGÊNCIA GERENCIAL
+
+    Dashboard interativo com visão geral dos setores
+
+    Relatórios personalizáveis com filtros por período
+
+    Comparativos de produção, estoque, perdas, vendas e manutenção
+
+    Exportação de relatórios (PDF, Excel, CSV)
+
+🎨 10. DESIGN E EXPERIÊNCIA DO USUÁRIO
+
+    Interface moderna e corporativa (tons de azul e cinza)
+
+    Estilo responsivo e minimalista (Tailwind + Framer Motion)
+
+    Menu lateral fixo por setor
+
+    Temas claros e escuros opcionais
+
+    Inserção da logomarca da empresa nos relatórios
+
+🔐 11. SEGURANÇA E BACKUPS
+
+    Login com autenticação JWT
+
+    Permissões específicas por setor/função
+
+    Backup local e sincronização com nuvem (Drive, Dropbox)
+
+    Logs de atividades por usuário
+
+    Mecanismos de recuperação e restauração
+
+🧩 12. EXPANSÕES FUTURAS (MODULARES)
+
+    Emissão de NFe (integração com SEFAZ)
+
+    Módulo RH: ponto, escalas, produtividade individual
+
+    App mobile offline para ordens de produção e manutenção
+
+    Integração com sistemas contábeis (Domínio, Alterdata, etc.)
+
+👨‍💻 INFORMAÇÕES DO DESENVOLVEDOR RESPONSÁVEL
+
+    Nome: Leonardo de Almeida Santos
+
+    Email: leoalmeidas@gmail.com
+
+    WhatsApp: (31) 98897-3275

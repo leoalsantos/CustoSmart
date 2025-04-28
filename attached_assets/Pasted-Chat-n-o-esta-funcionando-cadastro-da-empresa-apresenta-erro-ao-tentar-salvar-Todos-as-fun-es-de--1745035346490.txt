@@ -1,0 +1,38 @@
+Chat não esta funcionando
+cadastro da empresa apresenta erro ao tentar salvar
+Todos as funções de exportar gerando arquivo excel vazio e não gera arquivos PDF.
+Modificar o sistema de cadastro de unidade de medidas.
+Implementar abas com classes de medidas e dentro de cada classe, varios sistemas de medidas mestres.
+Permitir que cada sistema de medida mestre possa ser habilitado e desabilitado para aparecer no sistema.
+Quando uma materia prima for criada no sistema e introduzido uma unidade de medida, fazer com que quano essa materia prima for usada para compor algum produto automaticamente o sistema de a opção de selecionar a escala de medida dentro da mesma unidade que ela foi cadastrada fazendo sua conversão de forma automatica e abatendo a quantidade correta do estoque.
+registrar despesas não está funcionando. introduzir centros de custos de acordo com todos os modulos implementados e um centro de custo com nome despesas operacionais.
+contas a paga/receber não esta funcionando.
+Gerar relatório não esta funcionando
+botão editar formulas cadastradas não esta funcionando
+tabela produto cadastrado exibindo informação custo unitário, Preço de venda e Margem.
+inserir botão de editar e excluir nas ordens de produção geradas.
+Na tabela de ordem de produção não esta exibindo as informações de Produto, Quantidade, Status, Data de inicio, previsão e ao clicar em detalhes, abre uma pagina com erro 404 page not found.
+Botão controle de perdas nõ funciona
+cadastro de equipamento acrescentar opção de cadastrar ano de fabricação opção de digitar o ano em data de fabricação e ano de aquisição e botoes para passar os anos tambem
+botão de criar ordem de manutenção não funciona
+Botão nova manutenção abrindo pagina exibindo erro 404 page not found
+botão para ajustar materia prima cadastrada não funciona. Mudar o nome pata editar e corrigir seu funcionamento permitindo abrir a tela de cadastro para edição.
+Informações de estoque atual, estoque minimo e localização não estão sendo exibidos nas materias primas cadastradas.
+Botão de detalhes nos produtos acabados cadastrados abrindo pagina com erro 404 page not found
+Botão de nova inspeção não funciona
+Botão Nova não conformidade não funciona
+Botão novo cliente não funciona
+Importação arquivo xml não funciona.
+Modificar sistema de precificaçã. Quando clicar em nova precificação o sistema ja importar todos os custos de mão de obras, despesas e despesas cadastradas rateando entre a producão, somar com o valor de custo da materia prima ja com os impostos e frete especificados na nota fiscal e exibir o valor de custo final para a produção da unidade e permitir inserir a margem de lucro para calcular o preço de venda.
+Criar a opção de simular o valor de venda das mercadorias criando uma aba com nome de simulação produção dentro do modulo comercial para que seja inserido um volume de produção ficiticio para cada produto e assim o istema de precificação puxe as informações dessa produção ficticia e calcule o valor de venda baseado nessa procução.
+quando existir valores de produção ficiticios o sistema deve informar na area de precificação que que aquele valor de venda é simulado, pois existe quantidade de produção simulada lançado.
+implementar um botão de limpar produção simulada para que limpe todos os valores de produção de uma so vez,
+Botão de novo fornecedor não funciona
+botão nova ordem de compra não funciona.
+importação arquivo xml nao funciona.
+pagina de departamento em branco
+erro 500:{"message":"column\"title\"of relation\"positions\"does not exist"}
+Gerar folha de pagamento erro 500:{"message":"store.getPayrollByEmployeeYearMonth is not a function"}
+adicionar licença exibindo erro 500:{"message":"column\"approved_by_id\"of relation\"leaves\"does not exist"}
+novo ticket exibindo erro 500:{"error":"relation\"support_tickets\"does not exist"}
+na area de categoria, mudar para setor e exibir na lista os sedores da empresa para ser selecionado

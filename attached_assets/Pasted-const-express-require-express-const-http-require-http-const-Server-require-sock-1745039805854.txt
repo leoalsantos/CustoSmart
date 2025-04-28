@@ -1,0 +1,149 @@
+const express = require("express");
+const http = require("http");
+const { Server } = require("socket.io");
+const { Pool } = require("pg");
+const crypto = require("crypto");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server, { cors: { origin: "*" } });
+
+// Database connection
+const pool = new Pool({
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+});
+
+// Middleware
+app.use(express.json());
+
+// JWT Secret
+const JWT_SECRET = process.env.JWT_SECRET || "supersecretkey";
+
+// Helper function: encrypt message
+function encryptMessage(text) {
+  const iv = crypto.randomBytes(16);
+  const key = crypto.scryptSync(process.env.ENCRYPTION_KEY, "salt", 32);
+  const cipher = crypto.createCipheriv("aes-256-cbc", key, iv);
+  let encrypted = cipher.update(text, "utf8", "hex");
+  encrypted += cipher.final("hex");
+  return { iv: iv.toString("hex"), encrypted };
+}
+
+// Helper function: decrypt message
+function decryptMessage(encrypted, iv) {
+  const key = crypto.scryptSync(process.env.ENCRYPTION_KEY, "salt", 32);
+  const decipher = crypto.createDecipheriv("aes-256-cbc", key, Buffer.from(iv, "hex"));
+  let decrypted = decipher.update(encrypted, "hex", "utf8");
+  decrypted += decipher.final("utf8");
+  return decrypted;
+}
+
+// Routes
+
+// User registration
+app.post("/register", async (req, res) => {
+  const { username, email, password } = req.body;
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    await pool.query(
+      "INSERT INTO users (username, email, password_hash) VALUES ($1, $2, $3)",
+      [username, email, hashedPassword]
+    );
+    res.status(201).send("User registered successfully!");
+  } catch (error) {
+    res.status(500).send("Error registering user: " + error.message);
+  }
+});
+
+// User login
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const result = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
+    if (result.rows.length === 0) return res.status(401).send("Invalid credentials");
+
+    const user = result.rows[0];
+    const isValidPassword = await bcrypt.compare(password, user.password_hash);
+    if (!isValidPassword) return res.status(401).send("Invalid credentials");
+
+    const token = jwt.sign({ userId: user.id, username: user.username }, JWT_SECRET);
+    res.json({ token });
+  } catch (error) {
+    res.status(500).send("Error logging in: " + error.message);
+  }
+});
+
+// Get all public channels
+app.get("/channels", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT * FROM channels WHERE is_private = false");
+    res.json(result.rows);
+  } catch (error) {
+    res.status(500).send("Error fetching channels: " + error.message);
+  }
+});
+
+// Create a new channel
+app.post("/channels", async (req, res) => {
+  const { name, isPrivate } = req.body;
+  try {
+    await pool.query("INSERT INTO channels (name, is_private) VALUES ($1, $2)", [name, isPrivate]);
+    res.status(201).send("Channel created successfully!");
+  } catch (error) {
+    res.status(500).send("Error creating channel: " + error.message);
+  }
+});
+
+// Join a channel
+app.post("/channels/:channelId/join", async (req, res) => {
+  const { channelId } = req.params;
+  const { userId } = req.body;
+  try {
+    await pool.query("INSERT INTO channel_members (channel_id, user_id) VALUES ($1, $2)", [channelId, userId]);
+    res.send("Joined channel successfully!");
+  } catch (error) {
+    res.status(500).send("Error joining channel: " + error.message);
+  }
+});
+
+// WebSocket for real-time messaging
+io.on("connection", (socket) => {
+  console.log("A user connected");
+
+  // Join a channel
+  socket.on("joinChannel", (channelId) => {
+    socket.join(channelId);
+    console.log(`User joined channel ${channelId}`);
+  });
+
+  // Send a message
+  socket.on("sendMessage", async ({ channelId, userId, message }) => {
+    try {
+      const { iv, encrypted } = encryptMessage(message);
+      await pool.query(
+        "INSERT INTO messages (channel_id, user_id, content, iv) VALUES ($1, $2, $3, $4)",
+        [channelId, userId, encrypted, iv]
+      );
+      io.to(channelId).emit("newMessage", { userId, message });
+    } catch (error) {
+      console.error("Error sending message: ", error.message);
+    }
+  });
+
+  socket.on("disconnect", () => {
+    console.log("A user disconnected");
+  });
+});
+
+// Start server
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+        <h1>SisCompras</h1>
+        <p>Sistema Gerenciador de Compras</p>
+
+        <h:form id="incluirProduto">
+            <h2>Incluir Produto</h2>
+            <h:panelGrid columns="3" columnClasses="titleCell">
+                <h:outputLabel for="nome" value="Nome:" />
+                <h:inputText id="nome" value="#{produtoNovo.nome}" />
+                <h:message for="nome" errorClass="invalid" />
+
+                <h:outputLabel for="descricao" value="Descricao:" />
+                <h:inputText id="descricao" value="#{produtoNovo.descricao}" />
+                <h:message for="descricao" errorClass="invalid" />
+                
+                <h:outputLabel for="codigo" value="Codigo:" />
+                <h:inputText id="codigo" value="#{produtoNovo.codigo}" />
+                <h:message for="codigo" errorClass="invalid" />
+
+                <h:outputLabel for="categoria" value="Categoria:" />
+                <h:inputText id="categoria" value="#{produtoNovo.categoriaProduto}" />
+                <h:message for="categoria" errorClass="invalid" />
+
+                <h:outputLabel for="tipo" value="Tipo:" />
+                <h:inputText id="tipo" value="#{produtoNovo.tipoProduto}" />
+                <h:message for="tipo" errorClass="invalid" />
+
+                <h:outputLabel for="itemMidia" value="Item Midia:" />
+                <h:inputText id="itemMidia" value="#{produtoNovo.itemMidia}" />
+                <h:message for="itemMidia" errorClass="invalid" />
+
+                <h:outputLabel for="unidadeMedida" value="Unidade de Medida:" />
+                <h:selectOneListbox id="unidadeMedida" value="">
+                </h:selectOneListbox>  value="#{produtoNovo.unidadeMedida}" />
+                <h:message for="unidadeMedida" errorClass="invalid" />
+
+                <h:outputLabel for="fornecedores" value="Fornecedores:" />
+                <h:inputText id="fornecedores" value="#{produtoNovo.fornecedores}" />
+                <h:message for="fornecedores" errorClass="invalid" />
+
+                <h:outputLabel for="impostos" value="Impostos:" />
+                <h:inputText id="impostos" value="#{produtoNovo.impostos}" />
+                <h:message for="impostos" errorClass="invalid" />
+
+                <h:outputLabel for="codigoBarras" value="Codigo de Barras:" />
+                <h:inputText id="codigoBarras" value="#{produtoNovo.codigoBarras}" />
+                <h:message for="codigoBarras" errorClass="invalid" />
+
+                <h:outputLabel for="caracteristicas" value="Caracteristicas:" />
+                <h:inputTextarea id="caracteristicas" value="#{produtoNovo.caracteristicas}" /> 
+                <h:message for="caracteristicas" errorClass="invalid" />
+
+                <h:outputLabel for="utilizacaoProduto" value="Utilizacao do Produto:" />
+                <h:inputText id="utilizacaoProduto" value="#{produtoNovo.utilizacaoProduto}" />
+                <h:message for="utilizacaoProduto" errorClass="invalid" />
+
+                <h:outputLabel for="procedimentosRecebimento" value="Procedimentos de Recebimento:" />
+                <h:inputText id="procedimentosRecebimento" value="#{produtoNovo.procedimentosRecebimento}" />
+                <h:message for="procedimentosRecebimento" errorClass="invalid" />
+
+                <h:outputLabel for="precoCusto" value="Preco de Custo:" />
+                <h:inputText id="precoCusto" value="#{produtoNovo.precoCusto}" />
+                <h:message for="precoCusto" errorClass="invalid" />
+
+                <h:outputLabel for="precoCompra" value="Preco de Compra:" />
+                <h:inputText id="precoCompra" value="#{produtoNovo.precoCompra}" />
+                <h:message for="precoCompra" errorClass="invalid" />
+
+                <h:outputLabel for="precoMedio" value="Preco Medio:" />
+                <h:inputText id="precoMedio" value="#{produtoNovo.precoMedio}" />
+                <h:message for="precoMedio" errorClass="invalid" />
+
+                <h:outputLabel for="precoVenda" value="Preco de Venda:" />
+                <h:inputText id="precoVenda" value="#{produtoNovo.precoVenda}" />
+                <h:message for="precoVenda" errorClass="invalid" />
+
+                <h:outputLabel for="estoqueMinimo" value="Estoque Minimo:" />
+                <h:inputText id="estoqueMinimo" value="#{produtoNovo.estoqueMinimo}" />
+                <h:message for="estoqueMinimo" errorClass="invalid" />
+
+                <h:outputLabel for="estoqueMaximo" value="Estoque Maximo:" />
+                <h:inputText id="estoqueMaximo" value="#{produtoNovo.estoqueMaximo}" />
+                <h:message for="estoqueMaximo" errorClass="invalid" />
+
+                <h:outputLabel for="consumoAquisicao" value="Consumo de Aquisicao:" />
+                <h:inputText id="consumoAquisicao" value="#{produtoNovo.consumoAquisicao}" />
+                <h:message for="consumoAquisicao" errorClass="invalid" />
+
+                <h:outputLabel for="consumoMedio" value="Consumo Medio:" />
+                <h:inputText id="consumoMedio" value="#{produtoNovo.consumoMedio}" />
+                <h:message for="consumoMedio" errorClass="invalid" />
+
+                <h:outputLabel for="pontoPedido" value="Ponto de Pedido:" />
+                <h:inputText id="pontoPedido" value="#{produtoNovo.pontoPedido}" />
+                <h:message for="pontoPedido" errorClass="invalid" />
+
+            </h:panelGrid>
+
+            <p>
+                <h:panelGrid columns="2">
+                    <h:commandButton id="salvarProdudo"
+                        action="#{manterProdutoBean.salvar()}"
+                        value="Salvar" styleClass="register" />
+                    <h:messages styleClass="messages"
+                        errorClass="invalid" infoClass="valid"
+                        warnClass="warning" globalOnly="true" />
+                </h:panelGrid>
+            </p>
+        </h:form>
+        <h2>Produtos</h2>
+        <h:panelGroup rendered="#{empty members}">
+            <em>Nenhum produto encontrado.</em>
+        </h:panelGroup>
+        <h:dataTable var="_member" value="#{members}"
+            rendered="#{not empty members}"
+            styleClass="simpletablestyle">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                #{_member.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                #{_member.name}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                #{_member.email}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone #</f:facet>
+                #{_member.phoneNumber}
+            </h:column>
+            <h:column>
+                <f:facet name="header">REST URL</f:facet>
+                <a
+                    href="#{request.contextPath}/rest/members/#{_member.id}">/rest/members/#{_member.id}</a>
+            </h:column>
+            <f:facet name="footer">
+            REST URL for all members: <a
+                    href="#{request.contextPath}/rest/members">/rest/members</a>
+            </f:facet>
+        </h:dataTable>
+    </ui:define>
+</ui:composition>

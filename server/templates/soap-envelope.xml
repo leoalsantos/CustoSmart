@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+               xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+  <soap:Header>
+    <nfeCabecMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/{{service}}">
+      <cUF>{{UF_CODE}}</cUF>
+      <versaoDados>{{VERSION}}</versaoDados>
+    </nfeCabecMsg>
+  </soap:Header>
+  <soap:Body>
+    <nfeDadosMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/{{service}}">
+      {{XML_CONTENT}}
+    </nfeDadosMsg>
+  </soap:Body>
+</soap:Envelope>

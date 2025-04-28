@@ -1,0 +1,82 @@
+const express = require("express");
+const { Pool } = require("pg");
+
+const app = express();
+const pool = new Pool({
+    user: "postgres",
+    host: "localhost",
+    database: "chatdb",
+    password: "password",
+    port: 5432,
+});
+
+app.use(express.json());
+
+// Listar todos os usuários com status
+app.get("/users", async (req, res) => {
+    const result = await pool.query("SELECT id, username, status FROM users");
+    res.json(result.rows);
+});
+
+// Atualizar o status do usuário
+app.put("/users/:id/status", async (req, res) => {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    const validStatuses = ["online", "ausente", "ocupado", "offline"];
+    if (!validStatuses.includes(status)) {
+        return res.status(400).send("Status inválido.");
+    }
+
+    await pool.query("UPDATE users SET status = $1 WHERE id = $2", [
+        status,
+        id,
+    ]);
+    res.send("Status atualizado!");
+});
+
+// Enviar mensagem direta
+app.post("/messages", async (req, res) => {
+    const { senderId, receiverId, content } = req.body;
+    await pool.query(
+        "INSERT INTO messages (sender_id, receiver_id, content) VALUES ($1, $2, $3)",
+        [senderId, receiverId, content]
+    );
+    res.send("Mensagem enviada!");
+});
+
+// Criar grupo
+app.post("/groups", async (req, res) => {
+    const { name, createdBy } = req.body;
+    const result = await pool.query(
+        "INSERT INTO groups (name, created_by) VALUES ($1, $2) RETURNING id",
+        [name, createdBy]
+    );
+    res.json({ groupId: result.rows[0].id });
+});
+
+// Adicionar membro ao grupo
+app.post("/groups/:groupId/members", async (req, res) => {
+    const { groupId } = req.params;
+    const { userId } = req.body;
+    await pool.query(
+        "INSERT INTO group_members (group_id, user_id) VALUES ($1, $2)",
+        [groupId, userId]
+    );
+    res.send("Usuário adicionado ao grupo!");
+});
+
+// Enviar mensagem em grupo
+app.post("/groups/:groupId/messages", async (req, res) => {
+    const { groupId } = req.params;
+    const { senderId, content } = req.body;
+    await pool.query(
+        "INSERT INTO messages (sender_id, group_id, content) VALUES ($1, $2, $3)",
+        [senderId, groupId, content]
+    );
+    res.send("Mensagem enviada ao grupo!");
+});
+
+app.listen(3000, () => {
+    console.log("Servidor rodando na porta 3000");
+});

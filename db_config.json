@@ -1,0 +1,7 @@
+{
+  "host": "ep-rough-heart-a6iieuz9.us-west-2.aws.neon.tech",
+  "port": "5432",
+  "database": "neondb",
+  "user": "neondb_owner",
+  "password": "npg_iH1qRftADBb8"
+}

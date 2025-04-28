@@ -1,0 +1,12 @@
+br.com.pjsistemas.app.siscompras.business
+br.com.pjsistemas.app.siscompras.business.impl
+br.com.pjsistemas.app.siscompras.controller
+br.com.pjsistemas.app.siscompras.data
+br.com.pjsistemas.app.siscompras.facade
+br.com.pjsistemas.app.siscompras.facade.impl
+br.com.pjsistemas.app.siscompras.model
+br.com.pjsistemas.app.siscompras.rest
+br.com.pjsistemas.app.siscompras.service
+br.com.pjsistemas.app.siscompras.test
+br.com.pjsistemas.app.siscompras.util
+br.com.pjsistemas.app.siscompras.view

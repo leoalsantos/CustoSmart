@@ -1,0 +1,36 @@
+Na pagina de dashboard,quando clica no botão para ver todos os Alertas, a pagina de alertas reporta 404 Page Not Found, corrigir o erro.
+
+Ocultar a pagina Dashboard para os usuários que não possuirem permisão
+
+Perfil Usuário reporta erro reporta 404 Page Not Found, corrigir o erro.
+
+Configurações de Usuarios reporta 404 Page Not Found, corrigir o erro.
+
+Implementar controle de acesso as funções dos usuários, onde os administradores possam gerenciar o acesso individual dos usuarios editando a permissão habilitando ou desabilitando o acesso as funções da opcões da barra lateral por usuario.
+exemplo:
+habilitar ou desabilitar ao dashboard
+habilitar ou desabilitar acesso ao administrativo
+habilitar ou desabilitar acesso ao Financeiro
+
+e assim sucessivamente com todas as funções do menu, mantendo as funções ocultas para quem não tiver permissão
+
+
+Pagina de relatório financeiro reporta 404 Page Not Found, corrigir o erro.
+
+No setor Financeiro a pagina de relatório reporta 404 Page Not Found, corrigir o erro.
+
+No Setor Produção a pagina de controle de perdas reporta 404 Page Not Found, corrigir o erro.
+
+No setor de Manutenção, a pagina de programação reporta 404 Page Not Found, corrigir o erro.
+
+No setor de Qualidade as paginas reportam 404 Page Not Found, corrigir os erros.
+
+No setor comercial a pagina de pedidos reporta o erro [plugin:runtime-error-plugin] Badge is not defined
+-Verificar os erros existentes e corrigir implementando todas as especificações fornecidas.
+Setor de compras as paginas paginas reportam 404 Page Not Found, corrigir os erros.
+ Botão detalhes dentro de Fomulas e produtos no produto cadastrado apresenta o erro 404 Page Not Found, corrigir o erro.
+acrescentar botão com a função editar
+acrescentar botão com a função excluir.
+retirar janela de preço de custo e venda na tela de criar Produto
+Acrescentar Barra de rolagem na janela adicionar material para que os botões de cancela e criar produto não sumam na parte inferior da janela
+Acrescentar botão adicionar do lado esquerdo da materia prima a adicionar ao produto.
